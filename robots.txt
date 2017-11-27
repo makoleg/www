@@ -1,3 +1,96 @@
-User-Agent: *
-Disallow:
-Host: bitdust.io
+User-agent: *  # общие правила для роботов, кроме Яндекса и Google,
+User-agent: MJ12bot
+Disallow: /	
+User-agent: AhrefsBot
+Disallow: / 	
+User-agent: Baiduspider
+Disallow: / 
+User-agent: Nutch
+Disallow: /  	
+User-agent: ia_archiver
+Disallow: / 	
+User-agent: WebCopier
+Disallow: / 	
+User-agent: WebStripper
+Disallow: /  	
+User-agent: Teleport
+Disallow: / 	
+User-agent: Offline Explorer
+Disallow: / 	
+User-agent: SiteSnagger
+Disallow: / 	
+User-agent: psbot
+Disallow: / 	
+User-agent: TeleportPro
+Disallow: /  	
+User-agent: EmailSiphon
+Disallow: /  	
+User-agent: EmailCollector
+Disallow: /  	
+User-agent: larbin
+Disallow: /  	
+User-agent: BLEXBot 
+Disallow: / 	
+User-agent: SemrushBot
+Disallow: /  	
+User-agent: MSIECrawler
+Disallow: / 	
+User-agent: moget
+Disallow: /
+User-agent: seznambot
+Disallow: /
+                            # т.к. для них правила ниже
+Disallow: /cgi-bin          # папка на хостинге
+Disallow: /?                # все параметры запроса на главной
+                           
+Disallow: *?s=              # поиск
+Disallow: *&s=              # поиск
+Disallow: /search/          # поиск
+Disallow: /author/          # архив автора
+Disallow: /users/           # архив авторов
+Disallow: */trackback       # трекбеки, уведомления в комментариях о появлении открытой 
+                            # ссылки на статью
+
+Disallow: */embed           # все встраивания
+Disallow: */wlwmanifest.xml # xml-файл манифеста Windows Live Writer (если не используете, 
+                            
+Disallow: /xmlrpc.php       # файл WordPress API
+Disallow: *utm=             # ссылки с utm-метками
+Disallow: *openstat=        # ссылки с метками openstat
+Allow: */uploads            # открываем папку с файлами uploads
+
+User-agent: GoogleBot       # правила для Google (комментарии не дублирую)
+Disallow: /cgi-bin
+Disallow: /?
+Disallow: *?s=
+Disallow: *&s=
+Disallow: /search/
+Disallow: /users/
+Disallow: */trackback
+Disallow: */embed
+Disallow: */wlwmanifest.xml
+Disallow: /xmlrpc.php
+Disallow: *utm=
+Disallow: *openstat=
+         
+User-agent: Yandex          # правила для Яндекса (комментарии не дублирую)
+Disallow: /cgi-bin
+Disallow: /?
+Disallow: *?s=
+Disallow: *&s=
+Disallow: /search/
+Disallow: /users/
+Disallow: */trackback
+Disallow: */embed
+Disallow: */wlwmanifest.xml
+Disallow: /xmlrpc.php
+Allow: */uploads
+Allow: /*/*.js
+Allow: /*/*.css
+Allow: /.png
+Allow: /.jpg
+Allow: /.jpeg
+Allow: /.gif
+
+Host: https://bitdust.io
+Sitemap: https://bitdust.io/sitemap.xml
